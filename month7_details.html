@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Month 7: PCB Design (KiCAD) | Engineer Joslin Joseph</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .details-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(10, 25, 47, 0.85);
+            border: 1px solid var(--arc-reactor-blue);
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.2);
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            color: var(--arc-reactor-blue);
+            border: 1px solid var(--arc-reactor-blue);
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: rgba(0, 243, 255, 0.1);
+            box-shadow: 0 0 15px var(--arc-reactor-blue);
+        }
+
+        .week-section {
+            margin-bottom: 30px;
+            border-left: 3px solid var(--stark-gold);
+            padding-left: 20px;
+        }
+
+        .week-title {
+            color: var(--stark-gold);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .topic-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .topic-list li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .topic-list li::before {
+            content: "►";
+            color: var(--arc-reactor-blue);
+            position: absolute;
+            left: 0;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-grid"></div>
+    <header>
+        <h1>MONTH 07: PCB DESIGN (KICAD)</h1>
+        <div class="subtitle">DETAILED PROTOCOL BREAKDOWN</div>
+    </header>
+    <div class="container">
+        <a href="index.html" class="back-button">← RETURN TO MAIN DASHBOARD</a>
+        <div class="details-container">
+            <p style="margin-bottom: 30px; font-size: 1.1rem; line-height: 1.6;">
+                Objective: Move from breadboards to professional Printed Circuit Boards. Learn the complete workflow
+                from schematic to manufacturing files using KiCAD.
+            </p>
+            <div class="week-section">
+                <h3 class="week-title">WEEK 1: SCHEMATIC CAPTURE</h3>
+                <ul class="topic-list">
+                    <li>Introduction to KiCAD Interface</li>
+                    <li>Placing Symbols and Libraries</li>
+                    <li>Wiring and Electrical Rules Check (ERC)</li>
+                    <li>Creating Custom Schematic Symbols</li>
+                    <li>Netlists and BOM generation</li>
+                </ul>
+            </div>
+            <div class="week-section">
+                <h3 class="week-title">WEEK 2: FOOTPRINTS & LAYOUT</h3>
+                <ul class="topic-list">
+                    <li>Assigning Footprints to Symbols</li>
+                    <li>PCB Editor Basics: Layers (Front, Back, Silk, Mask)</li>
+                    <li>Component Placement Strategies</li>
+                    <li>Routing Tracks: Widths, Vias, and Clearance</li>
+                    <li>Design Rules Check (DRC)</li>
+                </ul>
+            </div>
+            <div class="week-section">
+                <h3 class="week-title">WEEK 3: ADVANCED LAYOUT</h3>
+                <ul class="topic-list">
+                    <li>Copper Pours and Ground Planes</li>
+                    <li>Differential Pairs (USB/Impedance control basics)</li>
+                    <li>3D Viewer and Mechanical integration</li>
+                    <li>Creating Custom Footprints</li>
+                </ul>
+            </div>
+            <div class="week-section">
+                <h3 class="week-title">WEEK 4: MANUFACTURING</h3>
+                <ul class="topic-list">
+                    <li>Gerber Files & Drill Files generation</li>
+                    <li>DFM (Design for Manufacturing) checks</li>
+                    <li>Ordering PCBs (JLCPCB/PCBWay process)</li>
+                    <li><strong>Capstone Project:</strong> Custom Arduino Clone or IoT Node PCB</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>POWERED BY ARC REACTOR TECH © 2025</p>
+        <p>ENGINEER JOSLIN JOSEPH - KERALA, INDIA</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Month 8: IoT Security & Analytics | Engineer Joslin Joseph</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .details-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(10, 25, 47, 0.85);
+            border: 1px solid var(--arc-reactor-blue);
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.2);
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            color: var(--arc-reactor-blue);
+            border: 1px solid var(--arc-reactor-blue);
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: rgba(0, 243, 255, 0.1);
+            box-shadow: 0 0 15px var(--arc-reactor-blue);
+        }
+
+        .week-section {
+            margin-bottom: 30px;
+            border-left: 3px solid var(--stark-gold);
+            padding-left: 20px;
+        }
+
+        .week-title {
+            color: var(--stark-gold);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .topic-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .topic-list li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .topic-list li::before {
+            content: "►";
+            color: var(--arc-reactor-blue);
+            position: absolute;
+            left: 0;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-grid"></div>
+    <header>
+        <h1>MONTH 08: IOT SECURITY & ANALYTICS</h1>
+        <div class="subtitle">DETAILED PROTOCOL BREAKDOWN</div>
+    </header>
+    <div class="container">
+        <a href="index.html" class="back-button">← RETURN TO MAIN DASHBOARD</a>
+        <div class="details-container">
+            <p style="margin-bottom: 30px; font-size: 1.1rem; line-height: 1.6;">
+                Objective: Secure your IoT devices against threats and learn to analyze the data they generate. Focus on
+                encryption, authentication, and cloud integration.
+            </p>
+            <div class="week-section">
+                <h3 class="week-title">WEEK 1: EMBEDDED SECURITY BASICS</h3>
+                <ul class="topic-list">
+                    <li>CIA Triad (Confidentiality, Integrity, Availability)</li>
+                    <li>Symmetric vs Asymmetric Encryption (AES, RSA)</li>
+                    <li>Hashing Algorithms (SHA-256)</li>
+                    <li>Secure Boot and Flash Encryption concepts</li>
+                </ul>
+            </div>
+            <div class="week-section">
+                <h3 class="week-title">WEEK 2: SECURE COMMUNICATION</h3>
+                <ul class="topic-list">
+                    <li>SSL/TLS Handshake explained</li>
+                    <li>Certificates and Keys management</li>
+                    <li>Implementing MQTTS (Secure MQTT) on ESP32</li>
+                    <li>Device Authentication strategies</li>
+                </ul>
+            </div>
+            <div class="week-section">
+                <h3 class="week-title">WEEK 3: ENTERPRISE CLOUD</h3>
+                <ul class="topic-list">
+                    <li>Introduction to AWS IoT Core / Azure IoT Hub</li>
+                    <li>Provisioning devices (Thing Shadows/Twins)</li>
+                    <li>Rules Engine and Lambda functions</li>
+                    <li>Storing data in DynamoDB / CosmosDB</li>
+                </ul>
+            </div>
+            <div class="week-section">
+                <h3 class="week-title">WEEK 4: ANALYTICS & VISUALIZATION</h3>
+                <ul class="topic-list">
+                    <li>Data Analytics pipelines</li>
+                    <li>Visualizing data with Grafana or QuickSight</li>
+                    <li>Anomaly Detection basics</li>
+                    <li><strong>Capstone Project:</strong> Secure Cloud-Connected Industrial Monitor</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>POWERED BY ARC REACTOR TECH © 2025</p>
+        <p>ENGINEER JOSLIN JOSEPH - KERALA, INDIA</p>
+    </footer>
+</body>
+
+</html>

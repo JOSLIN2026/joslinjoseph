@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Month 2: Arduino Ecosystem | Engineer Joslin Joseph</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .details-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(10, 25, 47, 0.85);
+            border: 1px solid var(--arc-reactor-blue);
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.2);
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            color: var(--arc-reactor-blue);
+            border: 1px solid var(--arc-reactor-blue);
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: rgba(0, 243, 255, 0.1);
+            box-shadow: 0 0 15px var(--arc-reactor-blue);
+        }
+
+        .week-section {
+            margin-bottom: 30px;
+            border-left: 3px solid var(--stark-gold);
+            padding-left: 20px;
+        }
+
+        .week-title {
+            color: var(--stark-gold);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .topic-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .topic-list li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .topic-list li::before {
+            content: "►";
+            color: var(--arc-reactor-blue);
+            position: absolute;
+            left: 0;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-grid"></div>
+    <header>
+        <h1>MONTH 02: ARDUINO ECOSYSTEM</h1>
+        <div class="subtitle">DETAILED PROTOCOL BREAKDOWN</div>
+    </header>
+    <div class="container">
+        <a href="index.html" class="back-button">← RETURN TO MAIN DASHBOARD</a>
+        <div class="details-container">
+            <p style="margin-bottom: 30px; font-size: 1.1rem; line-height: 1.6;">
+                Objective: Master the Arduino platform for rapid prototyping. Understand the hardware abstraction layer
+                and interface a wide variety of sensors and actuators.
+            </p>
+            <div class="week-section">
+                <h3 class="week-title">WEEK 1: IDE MASTERY & GPIO</h3>
+                <ul class="topic-list">
+                    <li>Arduino IDE Deep Dive & Library Manager</li>
+                    <li>Digital I/O: Inputs (Buttons, Switches) & Debouncing</li>
+                    <li>Digital Output: LEDs, Relays, Buzzers</li>
+                    <li>Analog I/O: Potentiometers, PWM for Fading</li>
+                    <li>Serial Monitor & Plotter for Debugging</li>
+                </ul>
+            </div>
+            <div class="week-section">
+                <h3 class="week-title">WEEK 2: SENSORS & ACTUATORS</h3>
+                <ul class="topic-list">
+                    <li>Interfacing DHT11/DHT22 (Temp & Humidity)</li>
+                    <li>Ultrasonic Sensor (HC-SR04) for Distance</li>
+                    <li>LDR (Light Dependent Resistor) & Calibration</li>
+                    <li>Servo Motors & DC Motors (L298N Driver)</li>
+                    <li>Soil Moisture Sensors</li>
+                </ul>
+            </div>
+            <div class="week-section">
+                <h3 class="week-title">WEEK 3: DISPLAYS & TIME</h3>
+                <ul class="topic-list">
+                    <li>16x2 LCD Interfacing (I2C vs Parallel)</li>
+                    <li>OLED Displays (SSD1306) basics</li>
+                    <li>Real Time Clock (DS3231) Integration</li>
+                    <li>Creating Custom Characters for LCD</li>
+                    <li>Menu Systems on Displays</li>
+                </ul>
+            </div>
+            <div class="week-section">
+                <h3 class="week-title">WEEK 4: ADVANCED PROJECTS</h3>
+                <ul class="topic-list">
+                    <li>Interrupts on Arduino</li>
+                    <li>EEPROM for Data Storage</li>
+                    <li><strong>Capstone Project:</strong> Smart Weather Station with Display</li>
+                    <li><strong>Capstone Project:</strong> Obstacle Avoiding Robot</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>POWERED BY ARC REACTOR TECH © 2025</p>
+        <p>ENGINEER JOSLIN JOSEPH - KERALA, INDIA</p>
+    </footer>
+</body>
+
+</html>

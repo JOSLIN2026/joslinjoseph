@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --arc-reactor-blue: #00f3ff;
+    --arc-reactor-glow: rgba(0, 243, 255, 0.6);
+    --stark-gold: #cfaa48;
+    --stark-gold-glow: rgba(207, 170, 72, 0.4);
+    --hud-dark: #05050a;
+    --hud-panel: rgba(10, 20, 30, 0.75);
+    --hud-glass: rgba(0, 243, 255, 0.05);
+    --hud-border: rgba(0, 243, 255, 0.4);
+    --text-glow: 0 0 10px var(--arc-reactor-blue);
+    --danger-red: #ff3333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--hud-dark);
+    /* High-tech Lab Background */
+    background-image:
+        linear-gradient(rgba(5, 10, 20, 0.85), rgba(5, 10, 20, 0.9)),
+        url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--arc-reactor-blue);
+    font-family: 'Rajdhani', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* --- Live HUD Background Elements --- */
+.hud-background-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.hud-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(0, 243, 255, 0.1);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.05);
+}
+
+.hud-ring:nth-child(1) {
+    width: 40vw;
+    height: 40vw;
+    border-top: 2px solid rgba(0, 243, 255, 0.3);
+    border-bottom: 2px solid rgba(0, 243, 255, 0.3);
+    animation: rotate-cw 60s linear infinite;
+}
+
+.hud-ring:nth-child(2) {
+    width: 30vw;
+    height: 30vw;
+    border-left: 2px solid rgba(207, 170, 72, 0.2);
+    border-right: 2px solid rgba(207, 170, 72, 0.2);
+    animation: rotate-ccw 45s linear infinite;
+}
+
+.hud-ring:nth-child(3) {
+    width: 20vw;
+    height: 20vw;
+    border: 1px dashed rgba(0, 243, 255, 0.2);
+    animation: rotate-cw 30s linear infinite;
+}
+
+@keyframes rotate-cw {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes rotate-ccw {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}
+
+/* --- Global Scanline Overlay --- */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: repeating-linear-gradient(0deg,
+            rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.1) 1px,
+            transparent 1px,
+            transparent 3px);
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.7;
+}
+
+/* --- HUD Background Grid --- */
+.bg-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(var(--hud-glass) 1px, transparent 1px),
+        linear-gradient(90deg, var(--hud-glass) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: -1;
+    opacity: 0.4;
+    pointer-events: none;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+/* --- Header Section --- */
+header {
+    text-align: center;
+    padding: 4rem 1rem;
+    position: relative;
+    border-bottom: 1px solid var(--hud-border);
+    background: linear-gradient(180deg, rgba(0, 243, 255, 0.05) 0%, transparent 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 95% 100%, 5% 100%, 0 85%);
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    color: white;
+    text-shadow:
+        0 0 10px var(--arc-reactor-blue),
+        0 0 20px var(--arc-reactor-blue),
+        0 0 40px var(--arc-reactor-blue);
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--stark-gold);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    min-height: 1.5em;
+    text-shadow: 0 0 10px var(--stark-gold-glow);
+}
+
+.college-tag {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* --- Main Content Container --- */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* --- Iron Man Lab Images Section --- */
+.lab-gallery {
+    display: flex;
+    gap: 30px;
+    margin: 3rem 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hologram-frame {
+    border: 1px solid var(--arc-reactor-blue);
+    padding: 5px;
+    background: var(--hud-panel);
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.1);
+    width: 45%;
+    min-width: 300px;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    /* Tech Corners */
+    clip-path: polygon(10px 0, 100% 0,
+            100% calc(100% - 10px), calc(100% - 10px) 100%,
+            0 100%, 0 10px);
+}
+
+.hologram-frame:hover {
+    transform: scale(1.03) translateY(-5px);
+    box-shadow: 0 0 30px var(--arc-reactor-glow);
+    border-color: white;
+}
+
+.hologram-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: sepia(20%) hue-rotate(180deg) saturate(120%) brightness(0.8) contrast(1.2);
+    opacity: 0.9;
+    transition: filter 0.3s ease;
+}
+
+.hologram-frame:hover img {
+    filter: none;
+    opacity: 1;
+}
+
+.hologram-frame::before {
+    content: "LAB_FEED_LIVE // SECURE";
+    font-family: 'Orbitron', sans-serif;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 0.7rem;
+    color: var(--arc-reactor-blue);
+    animation: blink 2s infinite;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 4px 8px;
+    border: 1px solid var(--arc-reactor-blue);
+    letter-spacing: 1px;
+}
+
+/* --- Motivation Bars --- */
+.motivation-section {
+    margin: 5rem 0;
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.2rem;
+    color: var(--stark-gold);
+    margin-bottom: 2.5rem;
+    border-left: 5px solid var(--stark-gold);
+    padding-left: 20px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 15px var(--stark-gold-glow);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--stark-gold), transparent);
+}
+
+.bar-container {
+    background: rgba(255, 255, 255, 0.02);
+    margin: 1.5rem 0;
+    border: 1px solid var(--hud-border);
+    position: relative;
+    height: 60px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+}
+
+.bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 78, 146, 0.5), var(--arc-reactor-blue));
+    width: 0%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    white-space: nowrap;
+    color: #000;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 20px var(--arc-reactor-glow);
+}
+
+.bar-quote {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-shadow: 0 0 5px black;
+    z-index: 10;
+    pointer-events: none;
+    text-transform: uppercase;
+}
+
+/* --- 12-Month Roadmap Grid --- */
+.roadmap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.month-card {
+    background: linear-gradient(135deg, rgba(10, 20, 30, 0.9) 0%, rgba(5, 10, 15, 0.95) 100%);
+    border: 1px solid var(--hud-border);
+    padding: 2rem;
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+
+    /* Tech Shape */
+    clip-path: polygon(20px 0, 100% 0,
+            100% calc(100% - 20px), calc(100% - 20px) 100%,
+            0 100%, 0 20px);
+}
+
+.month-card:hover {
+    border-color: var(--stark-gold);
+    box-shadow: 0 0 30px rgba(207, 170, 72, 0.15);
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, rgba(20, 40, 60, 0.9) 0%, rgba(10, 20, 30, 0.95) 100%);
+}
+
+.month-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--arc-reactor-blue), transparent);
+    animation: scanline 3s linear infinite;
+    opacity: 0.5;
+}
+
+/* Corner Accents */
+.month-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    border-bottom: 2px solid var(--arc-reactor-blue);
+    border-right: 2px solid var(--arc-reactor-blue);
+}
+
+.month-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.8rem;
+}
+
+.month-number {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    color: var(--stark-gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.month-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    font-weight: 700;
+    text-shadow: 0 0 8px var(--arc-reactor-blue);
+    text-transform: uppercase;
+}
+
+.month-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.month-content li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 1.05rem;
+    color: #b0c4de;
+    font-weight: 500;
+}
+
+.month-content li::before {
+    content: '►';
+    font-size: 0.8rem;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: var(--arc-reactor-blue);
+}
+
+.month-content strong {
+    color: var(--arc-reactor-blue);
+    font-weight: 700;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 3rem;
+    border-top: 1px solid var(--hud-border);
+    color: #667;
+    margin-top: 6rem;
+    background: rgba(0, 5, 10, 0.8);
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+}
+
+/* --- Animations --- */
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+}
+
+@keyframes scanline {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+        letter-spacing: 3px;
+    }
+
+    .lab-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hologram-frame {
+        width: 100%;
+    }
+
+    .month-card {
+        clip-path: none;
+        border-radius: 10px;
+    }
+}

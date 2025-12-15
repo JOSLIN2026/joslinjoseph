@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Month 5: Professional STM32 | Engineer Joslin Joseph</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .details-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(10, 25, 47, 0.85);
+            border: 1px solid var(--arc-reactor-blue);
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.2);
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            color: var(--arc-reactor-blue);
+            border: 1px solid var(--arc-reactor-blue);
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: rgba(0, 243, 255, 0.1);
+            box-shadow: 0 0 15px var(--arc-reactor-blue);
+        }
+
+        .week-section {
+            margin-bottom: 30px;
+            border-left: 3px solid var(--stark-gold);
+            padding-left: 20px;
+        }
+
+        .week-title {
+            color: var(--stark-gold);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .topic-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .topic-list li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .topic-list li::before {
+            content: "►";
+            color: var(--arc-reactor-blue);
+            position: absolute;
+            left: 0;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-grid"></div>
+    <header>
+        <h1>MONTH 05: PROFESSIONAL STM32</h1>
+        <div class="subtitle">DETAILED PROTOCOL BREAKDOWN</div>
+    </header>
+    <div class="container">
+        <a href="index.html" class="back-button">← RETURN TO MAIN DASHBOARD</a>
+        <div class="details-container">
+            <p style="margin-bottom: 30px; font-size: 1.1rem; line-height: 1.6;">
+                Objective: Step up to professional-grade microcontrollers. Learn the ARM Cortex-M architecture and
+                industry-standard tools like STM32CubeIDE.
+            </p>
+            <div class="week-section">
+                <h3 class="week-title">WEEK 1: ARM CORTEX-M & TOOLCHAIN</h3>
+                <ul class="topic-list">
+                    <li>Introduction to ARM Cortex-M Architecture</li>
+                    <li>Setup: STM32CubeIDE & STM32CubeMX</li>
+                    <li>Bare Metal vs HAL (Hardware Abstraction Layer)</li>
+                    <li>GPIO Programming with HAL</li>
+                    <li>Debugging with ST-Link (Breakpoints, Watch expressions)</li>
+                </ul>
+            </div>
+            <div class="week-section">
+                <h3 class="week-title">WEEK 2: INTERRUPTS & TIMERS</h3>
+                <ul class="topic-list">
+                    <li>NVIC (Nested Vectored Interrupt Controller)</li>
+                    <li>External Interrupts (EXTI)</li>
+                    <li>Timer Basics: Delays and Time measurement</li>
+                    <li>PWM Generation for Motor Control</li>
+                </ul>
+            </div>
+            <div class="week-section">
+                <h3 class="week-title">WEEK 3: ANALOG & DMA</h3>
+                <ul class="topic-list">
+                    <li>ADC (Analog to Digital Converter) Modes: Polling vs Interrupt</li>
+                    <li>DMA (Direct Memory Access) Concepts</li>
+                    <li>Using DMA for efficient ADC readings</li>
+                    <li>UART Communication with DMA</li>
+                </ul>
+            </div>
+            <div class="week-section">
+                <h3 class="week-title">WEEK 4: ADVANCED PERIPHERALS</h3>
+                <ul class="topic-list">
+                    <li>I2C & SPI Communication on STM32</li>
+                    <li>Low Power Modes (Sleep, Stop, Standby)</li>
+                    <li><strong>Capstone Project:</strong> Digital Oscilloscope (Basic)</li>
+                    <li><strong>Capstone Project:</strong> PID Motor Controller</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>POWERED BY ARC REACTOR TECH © 2025</p>
+        <p>ENGINEER JOSLIN JOSEPH - KERALA, INDIA</p>
+    </footer>
+</body>
+
+</html>

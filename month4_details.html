@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Month 4: MQTT & Cloud Integration | Engineer Joslin Joseph</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .details-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(10, 25, 47, 0.85);
+            border: 1px solid var(--arc-reactor-blue);
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.2);
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            color: var(--arc-reactor-blue);
+            border: 1px solid var(--arc-reactor-blue);
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: rgba(0, 243, 255, 0.1);
+            box-shadow: 0 0 15px var(--arc-reactor-blue);
+        }
+
+        .week-section {
+            margin-bottom: 30px;
+            border-left: 3px solid var(--stark-gold);
+            padding-left: 20px;
+        }
+
+        .week-title {
+            color: var(--stark-gold);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .topic-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .topic-list li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .topic-list li::before {
+            content: "►";
+            color: var(--arc-reactor-blue);
+            position: absolute;
+            left: 0;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-grid"></div>
+    <header>
+        <h1>MONTH 04: MQTT & CLOUD INTEGRATION</h1>
+        <div class="subtitle">DETAILED PROTOCOL BREAKDOWN</div>
+    </header>
+    <div class="container">
+        <a href="index.html" class="back-button">← RETURN TO MAIN DASHBOARD</a>
+        <div class="details-container">
+            <p style="margin-bottom: 30px; font-size: 1.1rem; line-height: 1.6;">
+                Objective: Connect devices to the cloud using industry-standard protocols. Build real-time dashboards
+                and control systems remotely.
+            </p>
+            <div class="week-section">
+                <h3 class="week-title">WEEK 1: MQTT PROTOCOL DEEP DIVE</h3>
+                <ul class="topic-list">
+                    <li>Understanding Pub/Sub Architecture</li>
+                    <li>Brokers (Mosquitto, HiveMQ) vs Clients</li>
+                    <li>Topics, Payloads, and QoS Levels (0, 1, 2)</li>
+                    <li>Retained Messages and Last Will & Testament</li>
+                    <li>Testing with MQTT.fx or MQTT Explorer</li>
+                </ul>
+            </div>
+            <div class="week-section">
+                <h3 class="week-title">WEEK 2: IOT PLATFORMS (NO-CODE/LOW-CODE)</h3>
+                <ul class="topic-list">
+                    <li><strong>Blynk IoT:</strong> App setup, Virtual Pins, Datastreams</li>
+                    <li><strong>ThingSpeak:</strong> Channel setup, Data visualization, MATLAB analysis</li>
+                    <li>Sending sensor data to cloud dashboards</li>
+                    <li>Triggering alerts (Email/SMS) from cloud</li>
+                </ul>
+            </div>
+            <div class="week-section">
+                <h3 class="week-title">WEEK 3: CUSTOM DASHBOARDS</h3>
+                <ul class="topic-list">
+                    <li>Introduction to Node-RED</li>
+                    <li>Flow-based programming basics</li>
+                    <li>Creating a local Dashboard (Gauges, Switches, Charts)</li>
+                    <li>Connecting ESP32 to Node-RED via MQTT</li>
+                </ul>
+            </div>
+            <div class="week-section">
+                <h3 class="week-title">WEEK 4: INTEGRATED PROJECTS</h3>
+                <ul class="topic-list">
+                    <li>Two-way communication (Control & Monitor)</li>
+                    <li><strong>Capstone Project:</strong> Global Home Automation System</li>
+                    <li><strong>Capstone Project:</strong> Remote Plant Health Monitor with Alerts</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>POWERED BY ARC REACTOR TECH © 2025</p>
+        <p>ENGINEER JOSLIN JOSEPH - KERALA, INDIA</p>
+    </footer>
+</body>
+
+</html>

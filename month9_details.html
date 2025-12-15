@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Month 9: Power & Advanced Protocols | Engineer Joslin Joseph</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .details-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(10, 25, 47, 0.85);
+            border: 1px solid var(--arc-reactor-blue);
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.2);
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            color: var(--arc-reactor-blue);
+            border: 1px solid var(--arc-reactor-blue);
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: rgba(0, 243, 255, 0.1);
+            box-shadow: 0 0 15px var(--arc-reactor-blue);
+        }
+
+        .week-section {
+            margin-bottom: 30px;
+            border-left: 3px solid var(--stark-gold);
+            padding-left: 20px;
+        }
+
+        .week-title {
+            color: var(--stark-gold);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .topic-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .topic-list li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .topic-list li::before {
+            content: "►";
+            color: var(--arc-reactor-blue);
+            position: absolute;
+            left: 0;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-grid"></div>
+    <header>
+        <h1>MONTH 09: POWER & ADVANCED PROTOCOLS</h1>
+        <div class="subtitle">DETAILED PROTOCOL BREAKDOWN</div>
+    </header>
+    <div class="container">
+        <a href="index.html" class="back-button">← RETURN TO MAIN DASHBOARD</a>
+        <div class="details-container">
+            <p style="margin-bottom: 30px; font-size: 1.1rem; line-height: 1.6;">
+                Objective: Optimize for battery life and long-range communication. Understand the constraints of remote,
+                off-grid embedded systems.
+            </p>
+            <div class="week-section">
+                <h3 class="week-title">WEEK 1: POWER OPTIMIZATION</h3>
+                <ul class="topic-list">
+                    <li>Understanding Power Consumption (Active vs Sleep)</li>
+                    <li>Sleep Modes: Light Sleep vs Deep Sleep</li>
+                    <li>Wake-up Sources (Timer, GPIO, Touch)</li>
+                    <li>Measuring Current with Multimeter/Power Profiler</li>
+                    <li>Battery Technologies (LiPo, LiFePO4, Coin Cells)</li>
+                </ul>
+            </div>
+            <div class="week-section">
+                <h3 class="week-title">WEEK 2: ENERGY HARVESTING</h3>
+                <ul class="topic-list">
+                    <li>Solar Panel selection and interfacing</li>
+                    <li>MPPT (Maximum Power Point Tracking) basics</li>
+                    <li>Battery Management Systems (BMS)</li>
+                    <li>Designing for "Zero" Maintenance</li>
+                </ul>
+            </div>
+            <div class="week-section">
+                <h3 class="week-title">WEEK 3: ADVANCED PROTOCOLS</h3>
+                <ul class="topic-list">
+                    <li>CoAP (Constrained Application Protocol) vs MQTT</li>
+                    <li>HTTP/REST APIs for Embedded Systems</li>
+                    <li>LoRa & LoRaWAN: Long Range, Low Power</li>
+                    <li>CAN Bus (Controller Area Network) basics</li>
+                </ul>
+            </div>
+            <div class="week-section">
+                <h3 class="week-title">WEEK 4: LOW POWER PROJECTS</h3>
+                <ul class="topic-list">
+                    <li>Optimizing Code for Power</li>
+                    <li><strong>Capstone Project:</strong> Solar Powered Weather Station (Remote)</li>
+                    <li><strong>Capstone Project:</strong> Coin-cell operated Bluetooth Beacon</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>POWERED BY ARC REACTOR TECH © 2025</p>
+        <p>ENGINEER JOSLIN JOSEPH - KERALA, INDIA</p>
+    </footer>
+</body>
+
+</html>
